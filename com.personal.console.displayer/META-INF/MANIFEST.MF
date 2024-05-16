@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ConsoleDisplayer
+Bundle-SymbolicName: ConsoleDisplayer;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Export-Package: capella.up.console,
+ capella.up.handlers
+Require-Bundle: org.eclipse.ui;bundle-version="3.119.0",
+ org.eclipse.core.resources
+Automatic-Module-Name: ConsoleDisplayer
+Bundle-RequiredExecutionEnvironment: JavaSE-17
