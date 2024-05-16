@@ -1,7 +1,7 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: ConsoleDisplayer
-Bundle-SymbolicName: ConsoleDisplayer;singleton:=true
+Bundle-SymbolicName: max.capella.console.displayer;singleton:=true
 Bundle-Version: 1.0.0.qualifier
 Export-Package: capella.up.console,
  capella.up.handlers
