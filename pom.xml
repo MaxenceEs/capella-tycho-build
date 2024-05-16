@@ -1,12 +1,12 @@
 <project>
  <modelVersion>4.0.0</modelVersion>
- <groupId>capella.tycho.build</groupId>
+ <groupId>max.capella.tycho.build</groupId>
  <artifactId>releng</artifactId>
  <version>1.0.0-SNAPSHOT</version>
  <packaging>pom</packaging>
 
  <properties>
-  <tycho.version>4.0.5</tycho.version>
+  <tycho.version>4.0.6</tycho.version>
   <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
  </properties>
 
@@ -49,7 +49,10 @@
     <version>${tycho.version}</version>
     <configuration>
      <!-- Optional set the Java version you are using-->
-      <!--   <executionEnvironment>JavaSE-17</executionEnvironment>-->
+      <executionEnvironment>JavaSE-17</executionEnvironment>
+      <target>
+      <file>../target-platform/capella-tp.target</file>
+    </target>
      <environments>
       <environment>
        <os>linux</os>
