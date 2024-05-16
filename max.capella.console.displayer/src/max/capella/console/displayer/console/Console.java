@@ -1,4 +1,4 @@
-package capella.up.console;
+package max.capella.console.displayer.console;
 
 import java.io.IOException;
 import java.io.OutputStream;

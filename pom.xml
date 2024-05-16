@@ -75,6 +75,6 @@
   </plugins>
  </build>
   <modules>
-   <!--TODO ADD YOUR MODULES HERE-->
+ <module>max.capella.console.displayer</module>
  </modules>
 </project>

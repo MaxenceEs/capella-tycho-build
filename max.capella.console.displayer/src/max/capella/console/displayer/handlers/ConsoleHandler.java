@@ -1,9 +1,9 @@
-package capella.up.handlers;
+package max.capella.console.displayer.handlers;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
 
-import capella.up.console.ConsoleDisplayer;
+import max.capella.console.displayer.console.ConsoleDisplayer;
 
 public class ConsoleHandler extends AbstractHandler {
 

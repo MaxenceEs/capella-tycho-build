@@ -20,7 +20,7 @@
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="capella.up.handlers.ConsoleHandler"
+            class="max.capella.console.displayer.handlers.ConsoleHandler"
             commandId="ConsoleCommand">
       </handler>
    </extension>

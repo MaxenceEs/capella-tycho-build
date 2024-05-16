@@ -1,4 +1,4 @@
-package capella.up.console;
+package max.capella.console.displayer.console;
 
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.GridLayout;
