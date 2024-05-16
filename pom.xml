@@ -51,7 +51,7 @@
      <!-- Optional set the Java version you are using-->
       <executionEnvironment>JavaSE-17</executionEnvironment>
       <target>
-      <file>../target-platform/capella-tp.target</file>
+      <file>../../releng/target-platform/capella-tp.target</file>
     </target>
      <environments>
       <environment>
@@ -75,6 +75,6 @@
   </plugins>
  </build>
   <modules>
- <module>max.capella.console.displayer</module>
+ <module>plugins/max.capella.console.displayer</module>
  </modules>
 </project>
