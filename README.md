@@ -12,20 +12,21 @@
 * `root/releng/target-platform/capella-tp.target` -> Allow to define the target platform
 * ~~`root/releng/max.capella.product`~~ -> Allow to build the product `capella.exe` for Windows
 
-Goals of each steps :
+# Step by step
+### Goals of each steps :
 1. Activate the `Tycho` extension for Maven
-2. Build the plug in as `JAR`
+2. Build the plugin as `JAR` (`max.capella.console.displayer.jar`)
 3. Build the plugin as `Feature`
 4. ~~Build the Capella product with embedded plugins (`capella.exe`)~~ -> Step failed
 
 ### 1. Activate the tycho extension for Maven
-1. Create the file `root`/`.mvn`/***`extension.xml`***
+1. Create the `extension.xml` file in directory `root/.mvn/`
 
 ### 2. Add a plugin, target platform, POM files and build the JAR
-1. Create the plugin `root/plugins/max.capella.console.displayer`.
-2. Create the target platform `root/releng/target-platform/capella-tp.target`
-3. Create the parent `pom.xml`
-4. Create the plugin `pom.xml`
+1. Create the plugin in directory `root/plugins/max.capella.console.displayer/`
+2. Create the target platform `capella-tp.target` file in directory `root/releng/target-platform/`
+3. Create the parent `pom.xml` file in directory `root/`
+4. Create the plugin `pom.xml` file in directory `root/plugins/max.capella.console.displayer/`
 
 By running the command `mvn clean verify` on the root, we get the following result :
 ```
@@ -38,13 +39,12 @@ By running the command `mvn clean verify` on the root, we get the following resu
 [INFO] BUILD SUCCESS
 [INFO] ------------------------------------------------------------------------
 [INFO] Total time:  16.402 s
-[INFO] Finished at: 2024-05-16T15:39:20+02:00
+[INFO] Finished at: 2024-05-20T15:39:20+02:00
 [INFO] ------------------------------------------------------------------------
 ```
--> It allows to create the plugin as JAR : `max.capella.console.displayer.jar`
 
 ### 3. Add the feature build
-1. Create the feature `root/features/max.capella.console.displayer.feature/feature.xml`.
+1. Create the feature `feature.xml` file in directory `root/features/max.capella.console.displayer.feature/`
 2. Update the parent pom  by adding new module to build :
 ```
 <modules>
