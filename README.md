@@ -5,8 +5,9 @@
 - [Glossary](wiki/glossary.md)
 
 # Installation
-* Clone the repository
-* Download `Capella 6.1` software, and modify the relative path in file `root/releng/target-platform/capella-tp.target`
+* Clone this repository
+* Download `Capella 6.1` software
+* Modify the Capella relative path in file `root/releng/target-platform/capella-tp.target`
 * Run the following Maven command on root `mvn clean verify`
 
 # Architecture
