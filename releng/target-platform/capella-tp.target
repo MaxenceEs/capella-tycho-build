@@ -3,5 +3,31 @@
 <target name="capella-tp">
 	<locations>
 		<location path="C:\Dev_Capella_6.1\capella" type="Directory"/>
+		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<repository location="http://download.eclipse.org/releases/2021-06"/>
+			<unit id="org.eclipse.sdk.feature.group"/>
+			<unit id="org.eclipse.platform.feature.group"/>
+			<unit id="org.eclipse.emf.sdk.feature.group"/>
+			<unit id="org.eclipse.emf.validation.source.feature.group"/>
+			<unit id="org.eclipse.emf.transaction.source.feature.group"/>
+			<unit id="org.eclipse.emf.workspace.source.feature.group"/>
+			<unit id="org.eclipse.equinox.executable.feature.group"/>
+			<unit id="com.ibm.icu"/>
+			<unit id="org.eclipse.viatra.query.sdk.feature.source.feature.group"/>
+			<unit id="org.eclipse.jgit.source.feature.group"/>
+			<unit id="org.eclipse.egit.mylyn.feature.group"/>
+			<unit id="org.eclipse.egit.source.feature.group"/>
+			<unit id="org.eclipse.mylyn_feature.feature.group"/>
+			<unit id="org.eclipse.mylyn.commons.feature.group"/>
+			<unit id="org.eclipse.mylyn.context_feature.feature.group"/>
+			<unit id="org.eclipse.mylyn.monitor.feature.group"/>
+			<unit id="org.eclipse.mylyn.team_feature.feature.group"/>
+			<unit id="org.eclipse.mylyn.ide_feature.feature.group"/>
+			<unit id="org.eclipse.mylyn.help.ui"/>
+			<unit id="org.apache.log4j"/>
+			<unit id="org.apache.commons.lang"/>
+			<unit id="com.google.guava"/>
+			<unit id="ch.qos.logback.slf4j"/>
+		</location>
 	</locations>
 </target>

@@ -1,0 +1,31 @@
+<product name="Max Capella Product" uid="max.capella.product" id="max.capella.product" application="org.polarsys.capella.core.platform.sirius.ui.perspective" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
+  
+   <configIni use="default">
+   </configIni>
+   <launcherArgs>
+      <vmArgs>-Dosgi.requiredJavaVersion=11
+         -Dosgi.dataAreaRequiresExplicitInit=true
+         -Dpde.jreProfile=JavaSE-17
+         -Xms1000m
+         -Xmx3000m
+         -Xss4m
+      </vmArgs>
+   </launcherArgs>
+   <launcher name="capella"/>
+
+    <features>
+      <feature id="max.capella.console.displayer.feature" version="0.0.0"/>
+      <feature id="org.polarsys.capella.rcp.source" version="0.0.0"/>
+   </features>
+
+    <configurations>
+      <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.event" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.p2.reconciler.dropins" autoStart="true" startLevel="0" />
+      <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
+      <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="4" />
+   </configurations>
+
+</product>

@@ -55,18 +55,8 @@
     </target>
      <environments>
       <environment>
-       <os>linux</os>
-       <ws>gtk</ws>
-       <arch>x86_64</arch>
-      </environment>
-      <environment>
        <os>win32</os>
        <ws>win32</ws>
-       <arch>x86_64</arch>
-      </environment>
-      <environment>
-       <os>macosx</os>
-       <ws>cocoa</ws>
        <arch>x86_64</arch>
       </environment>
      </environments>
@@ -75,6 +65,8 @@
   </plugins>
  </build>
   <modules>
- <module>plugins/max.capella.console.displayer</module>
+    <module>plugins/max.capella.console.displayer</module>
+    <module>features/max.capella.console.displayer.feature</module>
+    <module>releng/max.capella.product</module>
  </modules>
 </project>
