@@ -4,8 +4,12 @@
 - [Utils links](wiki/utils.md)
 - [Glossary](wiki/glossary.md)
 
-# Architecture
+# Installation
+* Clone the repository
+* Download `Capella 6.1` software, and modify the relative path in file `root/releng/target-platform/capella-tp.target`
+* Run the following Maven command on root `mvn clean verify`
 
+# Architecture
 * `root/pom.xml` -> Maven parent POM
 * `root/.mvn/extension.xml` -> Allow to activate the tycho extension for Maven
 * `root/features/max.capella.console.displayer.feature/feature.xml` -> Allow to create feature from plugin
