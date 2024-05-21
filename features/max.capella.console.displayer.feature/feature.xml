@@ -1,0 +1,12 @@
+<feature
+      id="max.capella.console.displayer.feature"
+      label="Max Capella Console Displayer Feature"
+      version="1.0.0.qualifier">
+
+   <plugin
+         id="max.capella.console.displayer"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+</feature>
