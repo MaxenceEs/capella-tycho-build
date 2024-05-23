@@ -4,6 +4,13 @@
 - [Utils links](wiki/utils.md)
 - [Glossary](wiki/glossary.md)
 
+# Setup
+* Download a `JDK`, and set environment variable `JAVA_HOME : C:\..path..\jdk`
+* Download `Maven`, and set environmenet variable `MAVEN_HOME : C:\..path..\apache-maven`
+* Set environment variable `PATH` to triggered each `bin` directory
+    *  `PATH : %MAVEN_HOME%\bin`
+    *  `PATH : %JAVA_HOME%\bin`
+    
 # Installation
 * Clone this repository
 * Download `Capella 6.1` software

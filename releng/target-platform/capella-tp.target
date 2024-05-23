@@ -2,6 +2,6 @@
 <?pde version="3.8"?>
 <target name="capella-tp">
 	<locations>
-		<location path="C:\Dev_Capella_6.1\capella" type="Directory"/>
+		<location path="C:\Software_Development\Capella_DevOps\Capella_6.1.0\capella" type="Directory"/>
 	</locations>
 </target>
