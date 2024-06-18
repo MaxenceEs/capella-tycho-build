@@ -3,6 +3,10 @@
 <target name="capella-tp">
 	<locations>
 		<location path="C:\Software_Development\Capella_DevOps\Capella_6.1.0\capella" type="Directory"/>
+		<location path="C:\Software_Development\Capella_DevOps\External_addons\capella-filtering-1.6.1" type="Directory"/>
+		<location path="C:\Software_Development\Capella_DevOps\External_addons\capella-requirements-vp-0.13.1" type="Directory"/>
+		<location path="C:\Software_Development\Capella_DevOps\External_addons\capella-sss-transition-1.6.4" type="Directory"/>
+		<location path="C:\Software_Development\Capella_DevOps\External_addons\capella-xhtml-docgen-6.1.0" type="Directory"/>
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
             <repository location="http://download.eclipse.org/releases/2021-06"/>
             <unit id="org.eclipse.sdk.feature.group"/>

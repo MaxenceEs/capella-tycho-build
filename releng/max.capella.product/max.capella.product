@@ -14,8 +14,10 @@
    <launcher name="capella"/>
 
     <features>
-      <feature id="max.capella.console.displayer.feature" version="0.0.0"/>
       <feature id="org.polarsys.capella.rcp.source" version="0.0.0"/>
+      <feature id="max.capella.console.displayer.feature" version="0.0.0"/>
+      <feature id="org.polarsys.capella.filtering.feature" version="0.0.0"/>
+      <feature id="org.polarsys.capella.transition.system2subsystem.feature" version="0.0.0"/>
    </features>
 
     <configurations>
