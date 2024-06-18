@@ -23,14 +23,14 @@
 * `root/features/max.capella.console.displayer.feature/feature.xml` -> Allow to create feature from plugin
 * `root/plugins/max.capella.console.displayer` -> Simple plugin for test
 * `root/releng/target-platform/capella-tp.target` -> Allow to define the target platform
-* ~~`root/releng/max.capella.product`~~ -> Allow to build the product `capella.exe` for Windows
+* `root/releng/max.capella.product` -> Allow to build the product `capella.exe` for Windows
 
 # Step by step
 ### Goals of each steps :
 1. Activate the `Tycho` extension for Maven
 2. Build the plugin as `JAR` (`max.capella.console.displayer.jar`)
 3. Build the plugin as `Feature`
-4. ~~Build the Capella product with embedded plugins (`capella.exe`)~~ -> Step failed
+4. Build the Capella product with embedded plugins (`capella.exe`) -> Step failed
 
 ### 1. Activate the tycho extension for Maven and create parent POM
 1. Create the `extension.xml` file in directory `root/.mvn/`
