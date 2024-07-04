@@ -135,7 +135,7 @@ But there is still a problem, the product seems to not be complete.
 
 
 ### 5. Add external plugins & viewpoints to the target platform & product
-1. Download each external plugins & viewpoints `as UpdateSites`
+1. Download each external plugins & viewpoints as `UpdateSites`
 2. Add each directory in the target platform `capella-tp.target` file in directory `root/releng/target-platform/`
     ```xml
     <!-- Local Update Site -->
@@ -147,7 +147,7 @@ But there is still a problem, the product seems to not be complete.
 3. Add each feature in the product  `max.capella.product` file in directory `root/releng/max.capella.product/`
      ```xml
     <features>
-      <feature id="org.polarsys.capella.rcp.source" version="0.0.0"/>
+      <feature id="org.polarsys.capella.rcp" version="0.0.0"/>
       <feature id="max.capella.console.displayer.feature" version="0.0.0" installMode="root"/>
       <feature id="org.polarsys.capella.filtering.feature" version="0.0.0"/>
    </features>
@@ -173,3 +173,19 @@ By running the command `mvn clean verify` on the root, we get the following resu
 Now the Capella product is well generated, with additionnal plugins.  
 
 ![](wiki/img/capella_product_with_updatesites.png)
+
+The list of installed plugins is the following :
+* Eclipse
+    * EGit
+    * SVN
+* Capella
+    * DocGen (XHTML)
+    * VP Filtering
+    * VP System to Subsystem (SSS)
+    * VP Requirements
+    * VP Modes & States (VP MS)
+* Thales
+    * DiagramStyler (DS)
+    * PVMT (VPD)
+* Obeo
+    * M2Doc

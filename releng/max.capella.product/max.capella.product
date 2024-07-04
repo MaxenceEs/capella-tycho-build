@@ -1,11 +1,9 @@
 <product name="Capella Core and External Plugins" uid="max.capella.product" id="max.capella.product" application="org.polarsys.capella.core.platform.sirius.ui.perspective.id" version="1.0.0.qualifier" useFeatures="true" includeLaunchers="true">
-  
+
    <configIni use="default">
    </configIni>
    <launcherArgs>
-      <vmArgs>-Dosgi.requiredJavaVersion=11
-         -Dosgi.dataAreaRequiresExplicitInit=true
-         -Dpde.jreProfile=JavaSE-17
+      <vmArgs> -Dosgi.requiredJavaVersion=11 -Dosgi.dataAreaRequiresExplicitInit=true -Dpde.jreProfile=JavaSE-17
          -Xms1000m
          -Xmx3000m
          -Xss4m
@@ -13,13 +11,48 @@
    </launcherArgs>
    <launcher name="capella"/>
 
-    <features>
-      <feature id="org.polarsys.capella.rcp.source" version="0.0.0"/>
+   <features>
+      <feature id="org.polarsys.capella.rcp" version="0.0.0"/>
       <feature id="max.capella.console.displayer.feature" version="0.0.0" installMode="root"/>
+
+      <!-- Eclipse plugins -->
+      <feature id="org.eclipse.egit" version="0.0.0"/>
+      <feature id="org.eclipse.egit.gitflow.feature" version="0.0.0"/>
+      <feature id="org.eclipse.team.svn.core" version="0.0.0"/>
+      <feature id="org.eclipse.team.svn" version="0.0.0"/>
+      <feature id="org.eclipse.team.svn.nl1" version="0.0.0"/>
+      <feature id="org.eclipse.team.svn.pde.build" version="0.0.0"/>
+      <feature id="org.eclipse.team.svn.ui.capabilities" version="0.0.0"/>
+
+      <!-- Capella plugins -->
+      <feature id="org.polarsys.capella.docgen.package.feature" version="0.0.0"/>
+
+      <!-- Polarsys VP -->
       <feature id="org.polarsys.capella.filtering.feature" version="0.0.0"/>
+      <feature id="org.polarsys.capella.transition.system2subsystem.feature" version="0.0.0"/>
+      <feature id="org.polarsys.capella.vp.requirements.feature" version="0.0.0"/>
+      <feature id="org.polarsys.kitalpha.vp.requirements.docgen.feature" version="0.0.0"/>
+      <feature id="org.polarsys.capella.vp.ms.feature" version="0.0.0"/>
+      <feature id="org.polarsys.capella.vp.ms.ag.feature" version="0.0.0"/>
+
+      <!-- Thales VP -->
+      <feature id="com.thalesgroup.mde.capella.diagramstyler.feature" version="0.0.0"/>
+      <feature id="com.thalesgroup.vpd.property.cdo.feature" version="0.0.0"/>
+      <feature id="com.thalesgroup.vpd.property.contextualexplorer.feature" version="0.0.0"/>
+      <feature id="com.thalesgroup.vpd.property.feature" version="0.0.0"/>
+
+      <!-- M2Doc VP -->
+      <plugin id="org.jsoup" version="0.0.0"/>
+      <feature id="org.obeonetwork.m2doc.launcher.feature" version="0.0.0"/>
+      <feature id="org.obeonetwork.m2doc.feature" version="0.0.0"/>
+      <feature id="org.obeonetwork.m2doc.html.feature" version="0.0.0"/>
+      <feature id="org.obeonetwork.m2doc.sirius.feature" version="0.0.0"/>
+      <feature id="org.obeonetwork.m2doc.ui.feature" version="0.0.0"/>
+      <feature id="org.obeonetwork.m2doc.ui.jdt.feature" version="0.0.0"/>
+      <feature id="org.obeonetwork.m2doc.wikitext.feature" version="0.0.0"/>
    </features>
 
-    <configurations>
+   <configurations>
       <plugin id="org.apache.felix.scr" autoStart="true" startLevel="2" />
       <plugin id="org.eclipse.core.runtime" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="2" />
