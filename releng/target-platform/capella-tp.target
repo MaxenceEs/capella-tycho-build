@@ -2,6 +2,7 @@
 <?pde version="3.8"?>
 <target name="capella-tp">
 	<locations>
+
 		<!-- Local Update Site -->
 		<location includeAllPlatforms="false" includeConfigurePhase="true" includeMode="planner" includeSource="true" type="InstallableUnit">
 			<repository id="VP-Filtering-1.6.2" location="file:/C:/Software_Development/Capella_DevOps/External_addons/Filtering-updateSite-1.6.2"/>
@@ -119,13 +120,17 @@
 			<unit id="org.eclipse.team.svn.ui.capabilities.feature.group" version="4.0.0.v20220904-1901"/>
 		</location>
 
+		<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
+			<repository location="file:/C:/Software_Development/Capella_DevOps/External_addons/TextualEditor-updateSite-0.11.1/"/>
+			<unit id="org.polarsys.capella.scenario.editor.feature.feature.group" version="0.11.1.202402291031"/>
+		</location>
+
 		<!-- Remote Update Site -->
 		<location includeAllPlatforms="false" includeConfigurePhase="false" includeMode="planner" includeSource="true" type="InstallableUnit">
 			<repository location="https://download.eclipse.org/capella/addons/xhtmldocgen/updates/releases/6.1.0/"/>
 			<unit id="org.polarsys.capella.docgen.package.feature.feature.group" version="6.1.0.202303281352"/>
 			<unit id="org.polarsys.capella.docgen.package.feature.source.feature.group" version="6.1.0.202303281352"/>
 		</location>
-
 
 		<!-- Local Capella Distribution -->
 		<location path="C:\Software_Development\Capella_DevOps\Capella_6.1.0\capella" type="Directory"/>

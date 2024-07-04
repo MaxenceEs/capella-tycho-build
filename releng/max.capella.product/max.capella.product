@@ -34,6 +34,7 @@
       <feature id="org.polarsys.kitalpha.vp.requirements.docgen.feature" version="0.0.0"/>
       <feature id="org.polarsys.capella.vp.ms.feature" version="0.0.0"/>
       <feature id="org.polarsys.capella.vp.ms.ag.feature" version="0.0.0"/>
+      <feature id="org.polarsys.capella.scenario.editor.feature" version="0.0.0"/>
 
       <!-- Thales VP -->
       <feature id="com.thalesgroup.mde.capella.diagramstyler.feature" version="0.0.0"/>

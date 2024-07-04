@@ -184,6 +184,7 @@ The list of installed plugins is the following :
     * VP System to Subsystem (SSS)
     * VP Requirements
     * VP Modes & States (VP MS)
+    * Textual Editor
 * Thales
     * DiagramStyler (DS)
     * PVMT (VPD)
