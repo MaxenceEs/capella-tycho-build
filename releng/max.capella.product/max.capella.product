@@ -9,10 +9,19 @@
          -Xss4m
       </vmArgs>
    </launcherArgs>
-   <launcher name="capella"/>
+
+   <windowImages i16="window_icons/Capella16x16.png" i32="window_icons/Capella32x32.png" i48="window_icons/Capella48x48.png" i64="window_icons/Capella64x64.png" i128="window_icons/Capella128x128.png" i256="window_icons/Capella256x256.png"/>
+   <splash location="org.polarsys.capella.core.platform.sirius.ui.perspective" />
+   <launcher name="capella">
+      <win useIco="true">
+         <ico path="launch_icons/Capella_launch_icon.ico"/>
+         <bmp/>
+      </win>
+   </launcher>
 
    <features>
       <feature id="org.polarsys.capella.rcp" version="0.0.0"/>
+      <feature id="org.polarsys.capella.doc.feature" version="0.0.0"/>
       <feature id="max.capella.console.displayer.feature" version="0.0.0" installMode="root"/>
 
       <!-- Eclipse plugins -->
@@ -62,5 +71,4 @@
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="4" />
    </configurations>
-
 </product>
