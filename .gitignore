@@ -25,3 +25,8 @@ replay_pid*
 
 # Maven packages
 */target/
+*/*/target/
+*/*/*/target/
+
+# Tycho file
+*.polyglot.pom.tycho
