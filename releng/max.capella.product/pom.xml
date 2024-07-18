@@ -10,17 +10,12 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>eclipse-repository</packaging>
 
-    <properties>
-        <tycho-version>4.0.6</tycho-version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>target-platform-configuration</artifactId>
-                <version>${tycho-version}</version>
+                <version>${tycho.version}</version>
                 <configuration>
                     <executionEnvironment>JavaSE-17</executionEnvironment>
                     <target>
@@ -39,7 +34,7 @@
             <plugin>
                 <groupId>org.eclipse.tycho</groupId>
                 <artifactId>tycho-p2-director-plugin</artifactId>
-                <version>${tycho-version}</version>
+                <version>${tycho.version}</version>
                 <executions>
                     <execution>
                         <id>materialize-products</id>
@@ -47,21 +42,57 @@
                             <goal>materialize-products</goal>
                         </goals>
                     </execution>
-                    <execution>
-                        <id>archive-products</id>
-                        <goals>
-                            <goal>archive-products</goal>
-                        </goals>
-                     </execution>
                 </executions>
                 <configuration>
                     <products>
-                       <product>
-						    <id>max.capella.product</id>
-                            <archiveFileName>tychorcpdemo-1.0</archiveFileName>
-						</product>
+                        <product>
+                            <id>max.capella.product</id>
+                        </product>
                     </products>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <version>${antrun-version}</version>
+                <executions>
+                    <execution>
+                        <id>create-dropins</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <target>
+                                <!-- Create the dropins folder -->
+                                <mkdir dir="${project.build.directory}/products/${project.build.name}/win32/win32/x86_64/dropins"/>
+                            </target>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>package-product</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <!-- Create the Capella .zip with 2 folders (capella + samples) -->
+                            <target>
+                                <!-- Modify config.ini -->
+                                <replace dir="${project.build.directory}/products/${project.build.name}/win32/win32/x86_64/configuration">
+                                    <include name="config.ini"/>
+                                    <replacefilter token="eclipse.application=org.polarsys.capella.core.platform.sirius.ui.perspective.id" value="eclipse.application=org.polarsys.capella.core.platform.sirius.ui.perspective.id${line.separator}org.eclipse.update.reconcile=false"/>
+                                </replace>
+
+                                <!-- Zip the Windows product -->
+                                <zip destfile="${project.build.directory}/products/capella-${unqualifiedVersion}-win32-win32-x86_64.zip">
+                                    <zipfileset dir="${project.build.directory}/products/${project.build.name}/win32/win32/x86_64" prefix="capella"/>
+                                    <zipfileset dir="../../samples" prefix="samples"/>
+                                </zip>
+                            </target>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
