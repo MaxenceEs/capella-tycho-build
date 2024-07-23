@@ -19,8 +19,13 @@
       </win>
    </launcher>
 
+   <intro introId="org.eclipse.ui.intro.universal"/>
+   <vm>
+      <windows include="false">org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-11</windows>
+   </vm>
+
    <features>
-      <feature id="org.polarsys.capella.rcp" version="0.0.0"/>
+      <feature id="org.polarsys.capella.rcp.source" version="0.0.0"/>
       <feature id="org.polarsys.capella.doc.feature" version="0.0.0"/>
       <feature id="max.capella.console.displayer.feature" version="0.0.0" installMode="root"/>
 
@@ -71,4 +76,11 @@
       <plugin id="org.eclipse.equinox.simpleconfigurator" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.update.configurator" autoStart="true" startLevel="4" />
    </configurations>
+
+   <preferencesInfo>
+      <targetfile overwrite="false"/>
+   </preferencesInfo>
+
+   <cssInfo>
+   </cssInfo>
 </product>

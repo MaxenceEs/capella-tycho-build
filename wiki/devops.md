@@ -39,8 +39,8 @@ Needs :
 
 
 ## How to mirror P2 repositories  
-Some P2 repository are available only on remote sites.  
-It could be usefull to mirror remote P2 repository on your local machine or on a Nexus repository.  
+Some P2 repositories are available only on remote sites.  
+It could be usefull to mirror remote P2 repositories on your local machine or on a Nexus repository.  
 It's particularly usefull if you have a slow connection, or if your have to work offline.
 
 To perform the mirroring of a remote P2 repository, run the two following commands :
